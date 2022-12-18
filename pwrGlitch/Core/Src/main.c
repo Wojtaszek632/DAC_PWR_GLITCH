@@ -102,15 +102,15 @@ int main(void)
 
 
 	  char s[3] = {userInput[0],userInput[1],userInput[2]};
-	  printf("Ustawiam1: %s\n", s);
+
 	  int IntVal=0;
 
 	  uint16_t value2set;
 
 	  IntVal = atoi(s);
-	  printf("Ustawiam2: %d\n", IntVal);
+
 	  value2set = (IntVal * 4095)/330;
-	  printf("Ustawiam3: %u\n", value2set);
+
 
 
 	  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, value2set);
@@ -130,7 +130,7 @@ void line_append(uint8_t value)
 			// jeśli bufor nie jest pusty to dodajemy 0 na końcu linii
 			line_buffer[line_length] = '\0';
 			// przetwarzamy dane
-			printf("Otrzymano: %s\n", line_buffer);
+
 			setDAC(line_buffer);
 			// zaczynamy zbieranie danych od nowa
 			 memset(line_buffer, 0, LINE_MAX_LENGTH + 1);
