@@ -1,1 +1,3 @@
-# DAC_PWR_GLITCH
+```
+python3 ./DAC_UART.py <Voltage in mV>
+```
